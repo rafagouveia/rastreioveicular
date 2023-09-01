@@ -1,0 +1,32 @@
+GET http://localhost:3000/
+###
+GET http://localhost:3000/routes
+
+
+###
+GET http://localhost:3000/routes/1
+
+### Cadastra uma rota
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+    "name": "Route Teste 1",
+    "source_id": "EklSLiBkYXMgU2VyaWd1ZWxhcywgMTE3IC0gTXXDp3VtYWdybywgSm_Do28gUGVzc29hIC0gUEIsIDU4MDY2LTE0MCwgQnJhc2lsIjASLgoUChIJBQvyvpbBrAcR5bKuWP8P_1gQdSoUChIJwXlRu5bBrAcRFHTZUFWSS_4",
+    "destination_id": "ChIJQXdjeljCrAcRtuye5vcox-E"
+}
+
+
+### CHAMADAS DO MAPA
+GET  http://localhost:3000/places?text=Mangabeira Shopping
+
+
+### pegar direções entre dois pontos
+GET http://localhost:3000/directions?originId=EklSLiBkYXMgU2VyaWd1ZWxhcywgMTE3IC0gTXXDp3VtYWdybywgSm_Do28gUGVzc29hIC0gUEIsIDU4MDY2LTE0MCwgQnJhc2lsIjASLgoUChIJBQvyvpbBrAcR5bKuWP8P_1gQdSoUChIJwXlRu5bBrAcRFHTZUFWSS_4&destinationId=ChIJQXdjeljCrAcRtuye5vcox-E
+
+### PEGA TODAS AS ROTA
+GET http://localhost:3000/routes
+
+
+### PEGA UMA ROTA DO BANCO POR ID
+GET http://localhost:3000/routes/64e66db902bc98fb3cb471d1
